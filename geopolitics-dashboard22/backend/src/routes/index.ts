@@ -9,7 +9,11 @@ import dashboardRouter from "./dashboard";
 
 const router: IRouter = Router();
 
-router.use(healthRouter);
+router.get("/test", (_req, res) => {
+  res.json({ message: "API working" });
+});
+
+router.use("/health", healthRouter);
 router.use("/countries", countriesRouter);
 router.use("/wars", warsRouter);
 router.use("/leaders", leadersRouter);
