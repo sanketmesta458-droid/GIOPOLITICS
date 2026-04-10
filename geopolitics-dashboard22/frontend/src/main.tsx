@@ -3,9 +3,7 @@ import App from "./App";
 import "./index.css";
 import { setBaseUrl } from "@/api/custom-fetch";
 
-const apiBase = import.meta.env.VITE_API_BASE_URL as string | undefined;
-if (apiBase) {
-  setBaseUrl(apiBase);
-}
+
+setBaseUrl("https://sincere-intuition-production-cf1c.up.railway.app/api");
 
 createRoot(document.getElementById("root")!).render(<App />);
